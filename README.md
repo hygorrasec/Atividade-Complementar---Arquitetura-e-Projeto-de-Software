@@ -23,7 +23,7 @@
 ## Como rodar os testes
 
 1. Certifique que o Python esteja instalado no seu sistema.
-2. Crie o ambiente virtual em cada pasta (auth_service) e (orders_service): ```python -m venv venv```
+2. Crie o ambiente virtual: ```python -m venv venv```
 - Iniciando Ambiente Virtual (Linux): ```. venv/bin/activate```
 - Iniciando Ambiente Virtual (Windows PowerShell): ```.\venv\Scripts\Activate.ps1```
 - Iniciando Ambiente Virtual (Windows CMD): ```.\venv\Scripts\activate.bat```
