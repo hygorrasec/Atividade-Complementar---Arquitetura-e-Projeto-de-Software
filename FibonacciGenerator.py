@@ -7,10 +7,10 @@ class FibonacciGenerator:
         """
         if n <= 0:
             return []  # OK: Sequência vazia para entrada inválida.
-        
+
         sequence = [0, 1]
         for _ in range(n):  
-            next_number = sequence[-1] + sequence[-1]  # BUG: Deve ser sequence[-1] + sequence[-2].
+            next_number = sequence[-1] + sequence[-2]  # OK.
             sequence.append(next_number)
         return sequence[:n]  # OK: Retorna apenas os primeiros n números.
 
@@ -28,7 +28,6 @@ class FibonacciGenerator:
             return 1  # OK: Segundo número da sequência é 1.
         
         a, b = 0, 1
-        for _ in range(n - 2):  # BUG: Deve ser range(n - 1).
-            a = b  
-            b = b + a
+        for _ in range(n - 2):  # Corrigido para indexação 1-based.
+            a, b = b, a + b
         return b
